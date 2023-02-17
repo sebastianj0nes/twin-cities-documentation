@@ -33,10 +33,9 @@ section {
     display: none;
 }
 
-#homeBut:hover,
-#modelBut:hover,
-#apiBut:hover,
-#configBut:hover{
+.modelBut:hover,
+.apiBut:hover,
+.configBut:hover{
     background-color: var(--mainBackground);
     color: var(--mainText);
 }
@@ -45,3 +44,4 @@ section {
     background-color: var(--mainBackground);
     color: var(--mainText);
 }
+

@@ -1,30 +1,36 @@
 // Single-page application - using javascript to add and remove content based on interaction, e.g click
 
 // Initialise HTML elements 
-var modelButton = $("#modelBut");
-var homeButton = $("#homeBut");
+// BUTTONS
+var modelButton = $(".modelBut");
+var homeButton = $(".homeBut");
+var configButton = $(".configBut");
+
+// DIVS
 var modelDiv = $("#modelDiv");
 var bioDiv = $("#bioDiv");
 
 
 
 
-
-homeButton.on("click",function(){
+// HOME 
+homeButton.on("click",() => {
     modelDiv.addClass("hide");
     bioDiv.removeClass("hide");
 })
 
-
-
-
 // MODELS & DESIGN
 // Event listener for click on model button
-modelButton.on("click", function(){
+modelButton.on("click", () => {
     bioDiv.addClass("hide");
     modelDiv.removeClass("hide");
-    $("#modelBut1").addClass("loaded");
+    $(".modelBut1").addClass("loaded");
 })
+
+configButton.on("click", () => {
+    bioDiv.addClass("hide");
+    modelDiv.addClass("hide");
+} )
 
 
 
