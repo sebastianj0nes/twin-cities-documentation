@@ -153,9 +153,32 @@
           <h2 class="default">The configuration file is used to hold global data and constants including API keys, static data and configuration data.</h2>
           <p class="lead">The configuration file is coded in PHP. </br> There are many methods and functions we can use in the configuration to prevent repetition in code. The config file is imported into all relevant files to share data and constants.</p>
           <h4 class="default">To initialise the configuration file, a namespace and timezone is set.</h4>
-          <img src="./assets/images/namespace().png" alt="Initialising namespace and timezone in PHP config file">
-          <p class="lead"></p>
-        </div>
+          <div class="row">
+            <div class="col">
+              <img src="./assets/images/namespace().png" alt="Initialising namespace and timezone in PHP config file" class="code">
+            </div>
+            <div class="col text-center">
+            </br>
+              <p class="lead">If a <strong>namespace</strong> is chosen, it must be declared in the first line. The contents of the file belong to the namespace 'TwinCitiesApplication'. </p>
+            </div>
+          </div>
+        </br>
+          <p class="lead">date_default_timezone_set() sets the default timezone used by all date/time functions. In this case we hard-code it to GMT, however it can be changed depending on location, for example 'date_default_timezone_set(America)'.</p>
+          <h3>Define()</h3>
+        <img src="./assets/images/define(API).png" alt="Defining API keys used in OpenweatherMap and Google Maps" class="code">
+        <p class="lead">Define() method allows a constant to be declared with a key:value system.
+        </br>
+        Constants do not change value, so are useful for declaring static values, such as API keys.
+        </p>
+        <p class="lead"><strong>OW_API</strong> is the key with the API being the value. The same for <strong>G_MAPS_API</strong>.
+        </br> The constants 'OW_API' and 'G_MAPS_API' can be used in the API query instead of manually writing the key each time.
+        </p>
+        <img src="./assets/images/define(edinburgh).png" alt="Defining edinburgh constant" class="code">
+        <p class="lead">The constant Edinburgh is being initialised with values such as name, co-ords and API calls. To add more values or update values to different cities, the values only must be changed once in the configuration file.</p>
+        <img src="./assets/images/edinburgh[name].png" alt="Calling values of edinburgh constant" class="code">
+        <p class="lead">The values defined in the constant Edinburgh can be returned using <strong>Edinburgh['value']</strong></p>
+        <p></p>
+      </div>
       </div>
     </section>
   </div>
