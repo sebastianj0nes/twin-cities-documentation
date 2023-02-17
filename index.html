@@ -62,13 +62,13 @@
           </div>
         </div>
         <div class="col-10" id="mainCol">
+          <h1 class="default text-center">Models & Design:</h1>
           <h2 class="default">The application pulls data from a populated database of twinning cities</h2>
-          <p class="lead">The database is populated with information from Edinburgh (Scotland) and Munich (Germany) -
-            these cities both have relatively large populations so they will have sufficient data to build our
-            application from. </p>
           <p class="lead"> To help conceptualise how our data would interact and be stored in the database, we created a
             conceptual and logical entity-relationship model.</br> Using Astah & mySQL to help render the models.</p>
-
+            <p class="lead">The database is populated with information from Edinburgh (Scotland) and Munich (Germany) -
+              these cities both have relatively large populations so they will have sufficient data to build our
+              application from. </p>
           <div class="container">
             <h4 class="default">Conceptual Model:</h4>
             <div class="row">
@@ -134,7 +134,31 @@
         <div class="col-10" id="mainCol"> -->
 
   <!-- CONFIG DIVIDER -->
-  
+  <div class="container hide" id="configDiv">
+    <section>
+      <div class="row">
+        <div class="col">
+          <h4> Contents: </h4>
+          <div class="list-group">
+            <button class="list-group-item list-group-item-action homeBut">Home</button>
+            <button class="list-group-item list-group-item-action modelBut1">Models & Design</button>
+            <button class="list-group-item list-group-item-action apiBut1">APIs</button>
+            <button class="list-group-item list-group-item-action configBut1">Configuration file</button>
+            <button class="list-group-item list-group-item-action">Models & Design</button>
+            <button class="list-group-item list-group-item-action">Models & Design</button>
+          </div>
+        </div>
+        <div class="col-10" id="mainCol">
+          <h1 class="default text-center">Configuration File:</h1>
+          <h2 class="default">The configuration file is used to hold global data and constants including API keys, static data and configuration data.</h2>
+          <p class="lead">The configuration file is coded in PHP. </br> There are many methods and functions we can use in the configuration to prevent repetition in code. The config file is imported into all relevant files to share data and constants.</p>
+          <h4 class="default">To initialise the configuration file, a namespace and timezone is set.</h4>
+          <img src="./assets/images/namespace().png" alt="Initialising namespace and timezone in PHP config file">
+          <p class="lead"></p>
+        </div>
+      </div>
+    </section>
+  </div>
 
 
 
