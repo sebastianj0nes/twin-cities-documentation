@@ -28,3 +28,14 @@ section {
 .container{
     padding-bottom: 10px;
 }
+
+.hide{
+    display: none;
+}
+
+#modelBut:hover,
+#apiBut:hover,
+#configBut:hover{
+    background-color: var(--mainBackground);
+    color: var(--mainText);
+}
