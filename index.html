@@ -5,20 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap CSS CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <!-- CSS file -->
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Twin Cities Documentation</title>
 </head>
 <body>
-    
+    <div class="jumbotron jumbotron-fluid" id="landingJumbo">
+        <div class="container">
+          <h1 class="display-4">Twin Cities Documentation</h1>
+          <p class="lead">Maintenance of database and code</p>
+        </div>
+      </div>
+
+      <div class="container">
+      <section id="contact">
+        <h2 class="default">The application pulls data from a populated database of twinning cities, Edinburgh & Munich.</h2>
+        <p class="lead">The application uses Edinburgh (Scotland) and Munich (Germany) for the location - these cities both have relatively large populations so they will have sufficient data to build our application from. </p>
+        <p class="lead"> To help conceptualise how our data would interact and be stored in the database, we created a conceptual and logical ER model. Using Astah & mySQL to help render the models.</p>
+
+        <h4 class="default">Conceptual Model:</h4>
+        <img src="./assets/images/assignment_conceptual.png" alt="Twin Cities Conceptual Model" class="models">
+
+        </div>
+    </section>
 
 
 
 
-    <!-- Bootstrap Javascript CDN -->
+    <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    <!-- jQuery CDN -->
+    <!-- Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Javascript file -->
     <script src="./assets/js/script.js"></script>
