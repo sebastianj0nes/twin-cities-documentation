@@ -13,7 +13,7 @@
 </head>
 <body>
     <div class="jumbotron jumbotron-fluid" id="landingJumbo">
-        <div class="container">
+        <div class="container text-center">
           <h1 class="display-4">Twin Cities Documentation</h1>
           <p class="lead">Maintenance of database and code</p>
         </div>
@@ -25,11 +25,42 @@
         <p class="lead">The application uses Edinburgh (Scotland) and Munich (Germany) for the location - these cities both have relatively large populations so they will have sufficient data to build our application from. </p>
         <p class="lead"> To help conceptualise how our data would interact and be stored in the database, we created a conceptual and logical ER model. Using Astah & mySQL to help render the models.</p>
 
+        <div class="container">
         <h4 class="default">Conceptual Model:</h4>
-        <img src="./assets/images/assignment_conceptual.png" alt="Twin Cities Conceptual Model" class="models">
-
+        <div class="row">
+          <div class="col">
+          <img src="./assets/images/assignment_conceptual.png" alt="Twin Cities Conceptual Model" class="models">
+          </div>
+          <div class="col">
+            <p class="lead">The model contains 5 entities;</p>
+            <ul class="lead">
+              <li>City</li>
+              <li>Places of interest</li>
+              <li>Weather</li>
+              <li>Forecast</li>
+              <li>Images</li>
+            </ul>
+            <p class="lead">Each entity has attributes to help populate the database. For example the 'city' entity has an id, name, lat/lon and population.</p>
+            <a href="./assets/models/Conceptual_model .asta" class="btn btn-lg btn-primary" download>Download Conceptual Model</a>
         </div>
-    </section>
+        </div>
+        </div>
+        <div class="container">
+        <h4 class="default">Logical Model:</h4>
+        <div class="row">
+          <div class="col">
+          <img src="./assets/images/assignment_logical_ER.png" alt="Twin Cities Conceptual Model" class="models">
+          </div>
+          <div class="col">
+            <p class="lead">The logical model transforms the conceptual model into a low-level model to show all Primary & Foreign Keys.</p>
+            <p class="lead">When updating the database, the models will not have to change, unless another entity is appended.</p>
+            <p class="lead">This is because the data populating the database are examples of entities, so to add another place of interest to the database the current model is sufficient.</p>
+            <a href="./assets/models/logical_er_model.mwb" class="btn btn-lg btn-primary" download>Download Logical Model</a>
+        </div>
+        </div>
+        </div>
+        </section>
+        </div>
 
 
 

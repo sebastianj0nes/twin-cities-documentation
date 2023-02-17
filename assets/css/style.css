@@ -24,3 +24,7 @@ section {
     max-height: 400px;
     max-width: 650px;
 }
+
+.container{
+    padding-bottom: 10px;
+}
