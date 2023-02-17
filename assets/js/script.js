@@ -10,9 +10,8 @@ var bioDiv = $("#bioDiv");
 
 
 
-
 homeButton.on("click",function(){
-    removeModel();
+    modelDiv.addClass("hide");
     bioDiv.removeClass("hide");
 })
 
@@ -22,8 +21,9 @@ homeButton.on("click",function(){
 // MODELS & DESIGN
 // Event listener for click on model button
 modelButton.on("click", function(){
-    removeModel();
     bioDiv.addClass("hide");
+    modelDiv.removeClass("hide");
+    $("#modelBut1").addClass("loaded");
 })
 
 
@@ -32,6 +32,3 @@ modelButton.on("click", function(){
 
 
 // Remove content function
-var removeModel = function(){
-    modelDiv.removeClass("hide");
-}

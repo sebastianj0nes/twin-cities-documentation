@@ -33,9 +33,15 @@ section {
     display: none;
 }
 
+#homeBut:hover,
 #modelBut:hover,
 #apiBut:hover,
 #configBut:hover{
+    background-color: var(--mainBackground);
+    color: var(--mainText);
+}
+
+.loaded{
     background-color: var(--mainBackground);
     color: var(--mainText);
 }
