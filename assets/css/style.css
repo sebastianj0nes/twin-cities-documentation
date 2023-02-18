@@ -3,8 +3,14 @@
     --mainText: #fefae0;
 }
 
+.btn{
+    background-color: var(--mainBackground);
+    color: var(--mainText);
+}
 
-
+.col{
+    padding-bottom: 10px;
+}
 
 #landingJumbo{
     display: grid;

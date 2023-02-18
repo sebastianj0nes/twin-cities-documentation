@@ -93,7 +93,7 @@ owButton.on("click", () => {
     $(".owBut1").addClass("loaded");
     $(".modelBut1").removeClass("loaded");
     $(".configBut1").removeClass("loaded");
-    $(".gmBut1").removeClass("hide");
+    $(".gmBut1").removeClass("loaded");
 })
 // Side navbar button
 $(".owBut1").on("click", () => {

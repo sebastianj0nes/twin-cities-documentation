@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
   <!-- CSS file -->
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
   <title>Twin Cities Documentation</title>
 </head>
 
@@ -27,7 +28,7 @@
   <div class="container" id="bioDiv">
     <section> 
       <h2> Twin Cities Summary:</h2>
-      <p class="lead">Application that retrieves information about two cities from a mySQL database, weather data from OpenWeather API to be displayed in a map, using Google Maps API with points of interests as markers on the map.</p>
+      <p class="lead">Application that retrieves and displays information about two cities from a mySQL database, weather data from OpenWeather API to be displayed in a map, using Google Maps API with points of interests as markers on the map.</p>
       <h3>The website provides in-depth technical documentation on system design, code implementation and database
         maintenance.</h3>
       <p class="lead">Documentation follows a logical flow, starting with design following up with implementation.</p>
@@ -114,6 +115,56 @@
     </section>
   </div>
 
+   <!-- CONFIG DIVIDER -->
+   <div class="container hide" id="configDiv">
+    <section>
+      <div class="row">
+        <div class="col">
+          <h4> Contents: </h4>
+          <div class="list-group">
+            <button class="list-group-item list-group-item-action homeBut">Home</button>
+            <button class="list-group-item list-group-item-action modelBut1">Models & Design</button>
+            <button class="list-group-item list-group-item-action configBut1">Configuration file</button>
+            <button class="list-group-item list-group-item-action owBut1">Openweather Map API</button>
+            <button class="list-group-item list-group-item-action gmBut1">Google Maps API</button>
+            <button class="list-group-item list-group-item-action">Models & Design</button>
+          </div>
+        </div>
+        <div class="col-10" id="mainCol">
+          <h1 class="default text-center">Configuration File:</h1>
+          <h2 class="default">The configuration file is used to hold global data and constants including API keys, static data and configuration data</h2>
+          <p class="lead">The configuration file is coded in PHP. </br> There are many methods and functions we can use in the configuration to prevent repetition in code. The config file is imported into all relevant files to share data and constants.</p>
+          <h4 class="default">To initialise the configuration file, a namespace and timezone is set.</h4>
+          <div class="row">
+            <div class="col">
+              <img src="./assets/images/namespace().png" alt="Initialising namespace and timezone in PHP config file" class="code">
+            </div>
+            <div class="col text-center">
+            </br>
+              <p class="lead">If a <strong>namespace</strong> is chosen, it must be declared in the first line. The contents of the file belong to the namespace 'TwinCitiesApplication'. </p>
+            </div>
+          </div>
+        </br>
+          <p class="lead">date_default_timezone_set() sets the default timezone used by all date/time functions. In this case we hard-code it to GMT, however it can be changed depending on location, for example 'date_default_timezone_set("America")'.</p>
+          <h3>Define()</h3>
+        <img src="./assets/images/define(API).png" alt="Defining API keys used in OpenweatherMap and Google Maps" class="code">
+        <p class="lead">Define() method allows a constant to be declared with a key:value system.
+        </br>
+        Constants do not change value, so are useful for declaring static values, such as API keys.
+        </p>
+        <p class="lead"><strong>OW_API</strong> is the key with the API being the value. The same for <strong>G_MAPS_API</strong>.
+        </br> The constants 'OW_API' and 'G_MAPS_API' can be used in the API query instead of manually writing the key each time.
+        </p>
+        <img src="./assets/images/define(edinburgh).png" alt="Defining edinburgh constant" class="code">
+        <p class="lead">The constant Edinburgh is being initialised with <strong>values such as name, co-ords and API calls.</strong> To add more values or update values to different cities, the values only must be <strong> changed once in the configuration file.</strong> The <strong>'markers[ ]'</strong> array holds the name and co-ords of specific points of interest, which can be looped through to add to the map. </p>
+        <img src="./assets/images/edinburgh[name].png" alt="Calling values of edinburgh constant" class="code">
+        <p class="lead">The values defined in the constant Edinburgh can be returned using <strong>Edinburgh['value']</strong></p>
+        <p></p>
+      </div>
+      </div>
+    </section>
+  </div>
+
 
   <!-- OPENWEATHER DIVIDER -->
   <div class="container hide" id="owDiv">
@@ -154,66 +205,29 @@
         </div>
         <div class="col-10" id="mainCol">
           <h1 class="default text-center">Google Maps API:</h1>
-        </div>
-      </div>
-    </section>
-  </div>
-
-
-
-
-
-
-  <!-- CONFIG DIVIDER -->
-  <div class="container hide" id="configDiv">
-    <section>
-      <div class="row">
-        <div class="col">
-          <h4> Contents: </h4>
-          <div class="list-group">
-            <button class="list-group-item list-group-item-action homeBut">Home</button>
-            <button class="list-group-item list-group-item-action modelBut1">Models & Design</button>
-            <button class="list-group-item list-group-item-action configBut1">Configuration file</button>
-            <button class="list-group-item list-group-item-action owBut1">Openweather Map API</button>
-            <button class="list-group-item list-group-item-action gmBut1">Google Maps API</button>
-            <button class="list-group-item list-group-item-action">Models & Design</button>
-          </div>
-        </div>
-        <div class="col-10" id="mainCol">
-          <h1 class="default text-center">Configuration File:</h1>
-          <h2 class="default">The configuration file is used to hold global data and constants including API keys, static data and configuration data.</h2>
-          <p class="lead">The configuration file is coded in PHP. </br> There are many methods and functions we can use in the configuration to prevent repetition in code. The config file is imported into all relevant files to share data and constants.</p>
-          <h4 class="default">To initialise the configuration file, a namespace and timezone is set.</h4>
-          <div class="row">
+          <h2 class="default">Using the available documentation to initialise and configure our map</h2>
+          <p class="lead">Full Google Maps documentation can be found <a href="https://developers.google.com/maps/documentation" target="_blank">here.</a></p>
+          <p class="lead">First, we need to <strong>initalise the map </strong>to add content and append markers to it.</p>
+          <img src="./assets/images/initMap().png" alt="Initialising map function" class="code">
+          <p class="lead">Using the <strong>initMap() function </strong>, we pass in options as an object to determine how the map is displayed. During implementation we chose 'zoom:12' , but the zoom can be changed to liking.</p>
+          </br>
+          <img src="./assets/images/mapVar.png" alt="Creating map instance in a variable" class="code">
+          <p class="lead">From here we create a new map instance, calling the API, also passing in our options as an argument to define how our map looks.</p>
+          <div class="row pt-4">
             <div class="col">
-              <img src="./assets/images/namespace().png" alt="Initialising namespace and timezone in PHP config file" class="code">
+              <img src="./assets/images/div(map).png" alt="Divider with id of map" class="code">
             </div>
-            <div class="col text-center">
-            </br>
-              <p class="lead">If a <strong>namespace</strong> is chosen, it must be declared in the first line. The contents of the file belong to the namespace 'TwinCitiesApplication'. </p>
+            <div class="col">
+              <p class="lead">The 'var map' selects the div in the HTML with 'id=map' using 'document.getElementById'. </p>
             </div>
           </div>
-        </br>
-          <p class="lead">date_default_timezone_set() sets the default timezone used by all date/time functions. In this case we hard-code it to GMT, however it can be changed depending on location, for example 'date_default_timezone_set(America)'.</p>
-          <h3>Define()</h3>
-        <img src="./assets/images/define(API).png" alt="Defining API keys used in OpenweatherMap and Google Maps" class="code">
-        <p class="lead">Define() method allows a constant to be declared with a key:value system.
-        </br>
-        Constants do not change value, so are useful for declaring static values, such as API keys.
-        </p>
-        <p class="lead"><strong>OW_API</strong> is the key with the API being the value. The same for <strong>G_MAPS_API</strong>.
-        </br> The constants 'OW_API' and 'G_MAPS_API' can be used in the API query instead of manually writing the key each time.
-        </p>
-        <img src="./assets/images/define(edinburgh).png" alt="Defining edinburgh constant" class="code">
-        <p class="lead">The constant Edinburgh is being initialised with <strong>values such as name, co-ords and API calls.</strong> To add more values or update values to different cities, the values only must be <strong> changed once in the configuration file.</strong> The <strong>'markers[ ]'</strong> array holds the name and co-ords of specific points of interest, which can be looped through to add to the map. </p>
-        <img src="./assets/images/edinburgh[name].png" alt="Calling values of edinburgh constant" class="code">
-        <p class="lead">The values defined in the constant Edinburgh can be returned using <strong>Edinburgh['value']</strong></p>
-        <p></p>
-      </div>
+          <p class="lead">To add points of interest onto the map, an array of markers holds information for each city.
+            This example uses Edinburgh, but Munich has a similarly structured array. As the information about the markers isn't going to change, we store it in the <button class="btn btn-sm configBut">configuration file</button></p>
+            <img src="./assets/images/markers[].png" alt="Markers array of edinburgh" class="code">
+        </div>
       </div>
     </section>
   </div>
-
 
 
 
