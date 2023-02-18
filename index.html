@@ -27,16 +27,16 @@
   <div class="container" id="bioDiv">
     <section> 
       <h2> Twin Cities Summary:</h2>
-      <p class="lead">Application that retrieves weather data about two cities from a mySQL database, to be displayed in a map with points of interests as markers on the map.</p>
+      <p class="lead">Application that retrieves information about two cities from a mySQL database, weather data from OpenWeather API to be displayed in a map, using Google Maps API with points of interests as markers on the map.</p>
       <h3>The website provides in-depth technical documentation on system design, code implementation and database
         maintenance.</h3>
       <p class="lead">Documentation follows a logical flow, starting with design following up with implementation.</p>
       <h3> Index: </h3>
       <div class="list-group">
-        <button class="list-group-item list-group-item-action modelBut">Models & Design (start here)</button>
-        <button class="list-group-item list-group-item-action apiBut">APIs</button>
+        <button class="list-group-item list-group-item-action modelBut">Models & Design </button>
         <button class="list-group-item list-group-item-action configBut">Configuration file</button>
-        <button class="list-group-item list-group-item-action">Models & Design</button>
+        <button class="list-group-item list-group-item-action owBut">Openweather Map API</button>
+        <button class="list-group-item list-group-item-action gmBut">Google Maps API</button>
         <button class="list-group-item list-group-item-action">Models & Design</button>
 
       </div>
@@ -55,9 +55,9 @@
           <div class="list-group">
             <button class="list-group-item list-group-item-action homeBut">Home</button>
             <button class="list-group-item list-group-item-action modelBut1">Models & Design</button>
-            <button class="list-group-item list-group-item-action apiBut1">APIs</button>
             <button class="list-group-item list-group-item-action configBut1">Configuration file</button>
-            <button class="list-group-item list-group-item-action">Models & Design</button>
+            <button class="list-group-item list-group-item-action owBut1">Openweather Map API</button>
+            <button class="list-group-item list-group-item-action gmBut1">Google Maps API</button>
             <button class="list-group-item list-group-item-action">Models & Design</button>
           </div>
         </div>
@@ -115,23 +115,54 @@
   </div>
 
 
-
-  <!-- API DIVIDER -->
-  <!-- <div class="container hide" id="apiDiv">
+  <!-- OPENWEATHER DIVIDER -->
+  <div class="container hide" id="owDiv">
     <section>
       <div class="row">
         <div class="col">
           <h4> Contents: </h4>
           <div class="list-group">
-            <button class="list-group-item list-group-item-action" id="homeBut">Home</button>
-            <button class="list-group-item list-group-item-action" id="modelBut1">Models & Design</button>
-            <button class="list-group-item list-group-item-action" id="apiBut1">APIs</button>
-            <button class="list-group-item list-group-item-action" id="configBut1">Configuration file</button>
-            <button class="list-group-item list-group-item-action">Models & Design</button>
+            <button class="list-group-item list-group-item-action homeBut">Home</button>
+            <button class="list-group-item list-group-item-action modelBut1">Models & Design</button>
+            <button class="list-group-item list-group-item-action configBut1">Configuration file</button>
+            <button class="list-group-item list-group-item-action owBut1">Openweather Map API</button>
+            <button class="list-group-item list-group-item-action gmBut1">Google Maps API</button>
             <button class="list-group-item list-group-item-action">Models & Design</button>
           </div>
         </div>
-        <div class="col-10" id="mainCol"> -->
+        <div class="col-10" id="mainCol">
+          <h1 class="default text-center">Openweather Map API:</h1>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- GOOGLE MAPS DIVIDER -->
+  <div class="container hide" id="gmDiv">
+    <section>
+      <div class="row">
+        <div class="col">
+          <h4> Contents: </h4>
+          <div class="list-group">
+            <button class="list-group-item list-group-item-action homeBut">Home</button>
+            <button class="list-group-item list-group-item-action modelBut1">Models & Design</button>
+            <button class="list-group-item list-group-item-action configBut1">Configuration file</button>
+            <button class="list-group-item list-group-item-action owBut1">Openweather Map API</button>
+            <button class="list-group-item list-group-item-action gmBut1">Google Maps API</button>
+            <button class="list-group-item list-group-item-action">Models & Design</button>
+          </div>
+        </div>
+        <div class="col-10" id="mainCol">
+          <h1 class="default text-center">Google Maps API:</h1>
+        </div>
+      </div>
+    </section>
+  </div>
+
+
+
+
+
 
   <!-- CONFIG DIVIDER -->
   <div class="container hide" id="configDiv">
@@ -142,9 +173,9 @@
           <div class="list-group">
             <button class="list-group-item list-group-item-action homeBut">Home</button>
             <button class="list-group-item list-group-item-action modelBut1">Models & Design</button>
-            <button class="list-group-item list-group-item-action apiBut1">APIs</button>
             <button class="list-group-item list-group-item-action configBut1">Configuration file</button>
-            <button class="list-group-item list-group-item-action">Models & Design</button>
+            <button class="list-group-item list-group-item-action owBut1">Openweather Map API</button>
+            <button class="list-group-item list-group-item-action gmBut1">Google Maps API</button>
             <button class="list-group-item list-group-item-action">Models & Design</button>
           </div>
         </div>
@@ -174,7 +205,7 @@
         </br> The constants 'OW_API' and 'G_MAPS_API' can be used in the API query instead of manually writing the key each time.
         </p>
         <img src="./assets/images/define(edinburgh).png" alt="Defining edinburgh constant" class="code">
-        <p class="lead">The constant Edinburgh is being initialised with values such as name, co-ords and API calls. To add more values or update values to different cities, the values only must be changed once in the configuration file.</p>
+        <p class="lead">The constant Edinburgh is being initialised with <strong>values such as name, co-ords and API calls.</strong> To add more values or update values to different cities, the values only must be <strong> changed once in the configuration file.</strong> The <strong>'markers[ ]'</strong> array holds the name and co-ords of specific points of interest, which can be looped through to add to the map. </p>
         <img src="./assets/images/edinburgh[name].png" alt="Calling values of edinburgh constant" class="code">
         <p class="lead">The values defined in the constant Edinburgh can be returned using <strong>Edinburgh['value']</strong></p>
         <p></p>

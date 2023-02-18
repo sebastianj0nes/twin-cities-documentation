@@ -44,8 +44,9 @@ section {
 }
 
 .modelBut:hover,
-.apiBut:hover,
-.configBut:hover{
+.owBut:hover,
+.configBut:hover,
+.gmBut:hover{
     background-color: var(--mainBackground);
     color: var(--mainText);
 }
