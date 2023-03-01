@@ -4,6 +4,7 @@
     --mainLinks: #fb8500;
 }
 
+
 a{
     color: var(--mainLinks);
 }

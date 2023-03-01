@@ -246,3 +246,13 @@ $(".dbBut1").on("click", () => {
     $(".configBut1").removeClass("loaded");
     $(".dbBut1").addClass("loaded");
 })
+
+
+// Hover on image to change photo
+$("#navbarImage").on("mouseover", () => {
+    $("#navbarImage").attr("src","./assets/images/navbarCode.png");
+})
+
+$("#navbarImage").on("mouseout", () => {
+    $("#navbarImage").attr("src","./assets/images/navBar.png");
+})

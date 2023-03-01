@@ -145,6 +145,40 @@
     </section>
   </div>
 
+  <!-- PAGE STRUCTURE DIVIDER -->
+
+  <div class="container hide" id="structDiv">
+    <section>
+      <div class="row">
+        <div class="col">
+          <h4> Contents: </h4>
+          <div class="list-group">
+            <button class="list-group-item list-group-item-action homeBut">Home</button>
+            <button class="list-group-item list-group-item-action modelBut1">Models & Design</button>
+            <button class="list-group-item list-group-item-action structBut1">Page Structure</button>
+            <button class="list-group-item list-group-item-action configBut1">Configuration file</button>
+            <button class="list-group-item list-group-item-action owBut1">Openweather Map API</button>
+            <button class="list-group-item list-group-item-action gmBut1">Google Maps API</button>
+            <button class="list-group-item list-group-item-action dbBut1">Database</button>
+          </div>
+        </div>
+        <div class="col-10" id="mainCol">
+          <h1 class="default text-center">Page Structure: </h1>
+          <h3>Using HTML & Bootstrap to format the page correctly</h3>
+          <p class="lead">To make the page format easier to read, whilst also implementing resposiveness, the Bootstrap framework has been adopted to help with styling and positioning.</p>
+          <p class="lead">Bootstrap documentation can be found <a href="https://getbootstrap.com/" target="_blank">here.</a></p>
+          <img src="./assets/images/twinCitOverview.png" alt="Overview screenshot of twin cities app" class="code">
+          <p class="lead">The page has a simple layout, with a navbar and sections to hold the Map and Weather data.</p>
+          <p class="lead"><strong>Hover over page elements to see the code behind the elements.</strong></p>
+          <h3>Navbar</h3>
+          <p class="lead">The navbar contains links to Munich & Edinburgh, upon clicking on these links it will query the relevant data and display it to the user.</p>
+          <img src="./assets/images/navBar.png" alt="Twin Cities navbar" class="code" id="navbarImage">
+          <h3>Map Divider</h3>
+          <p class="lead">The Map is held inside a card from Bootstrap</p>
+      </div>
+    </section>
+  </div>
+
    <!-- CONFIG DIVIDER -->
    <div class="container hide" id="configDiv">
     <section>
@@ -199,30 +233,6 @@
         <img src="./assets/images/error handler.png" alt="Error handler function" class="code">
         <p class="lead">The function takes in the error number, error message, file location and the line of the error as arguments in the function. From this it will echo an error message to the user to help identify where the bug has been caused.</p>
       </div>
-      </div>
-    </section>
-  </div>
-
-<!-- PAGE STRUCTURE DIVIDER -->
-
-  <div class="container hide" id="structDiv">
-    <section>
-      <div class="row">
-        <div class="col">
-          <h4> Contents: </h4>
-          <div class="list-group">
-            <button class="list-group-item list-group-item-action homeBut">Home</button>
-            <button class="list-group-item list-group-item-action modelBut1">Models & Design</button>
-            <button class="list-group-item list-group-item-action structBut1">Page Structure</button>
-            <button class="list-group-item list-group-item-action configBut1">Configuration file</button>
-            <button class="list-group-item list-group-item-action owBut1">Openweather Map API</button>
-            <button class="list-group-item list-group-item-action gmBut1">Google Maps API</button>
-            <button class="list-group-item list-group-item-action dbBut1">Database</button>
-          </div>
-        </div>
-        <div class="col-10" id="mainCol">
-          <h1 class="default text-center">Page Structure: </h1>
-          <h3>Using HTML</h3>
       </div>
     </section>
   </div>
