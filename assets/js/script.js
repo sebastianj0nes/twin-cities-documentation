@@ -25,6 +25,7 @@ homeButton.on("click",() => {
     configDiv.addClass("hide");
     owDiv.addClass("hide");
     gmDiv.addClass("hide");
+    dbDiv.addClass("hide");
 })
 
 
@@ -36,11 +37,13 @@ modelButton.on("click", () => {
     configDiv.addClass("hide");
     owDiv.addClass("hide");
     gmDiv.addClass("hide");
+    dbDiv.addClass("hide");
     modelDiv.removeClass("hide");
     $(".modelBut1").addClass("loaded");
     $(".configBut1").removeClass("loaded");
     $(".owBut1").removeClass("loaded");
     $(".gmBut1").removeClass("loaded");
+    $(".dbBut1").removeClass("loaded");
 })
 // Side navbar button
 $(".modelBut1").on("click", () => {
@@ -48,11 +51,13 @@ $(".modelBut1").on("click", () => {
     configDiv.addClass("hide");
     owDiv.addClass("hide");
     gmDiv.addClass("hide");
+    dbDiv.addClass("hide");
     modelDiv.removeClass("hide");
     $(".modelBut1").addClass("loaded");
     $(".configBut1").removeClass("loaded");
     $(".owBut1").removeClass("loaded");
     $(".gmBut1").removeClass("loaded");
+    $(".dbBut1").removeClass("loaded");
 })
 
 // CONFIGURATION FILE
@@ -63,11 +68,13 @@ configButton.on("click", () => {
     modelDiv.addClass("hide");
     owDiv.addClass("hide");
     gmDiv.addClass("hide");
+    dbDiv.addClass("hide");
     configDiv.removeClass("hide");
     $(".configBut1").addClass("loaded");
     $(".modelBut1").removeClass("loaded");
     $(".owBut1").removeClass("loaded");
     $(".gmBut1").removeClass("loaded");
+    $(".dbBut1").removeClass("loaded");
 })
 // Side navbar button
 $(".configBut1").on("click", () => {
@@ -75,11 +82,13 @@ $(".configBut1").on("click", () => {
     modelDiv.addClass("hide");
     owDiv.addClass("hide");
     gmDiv.addClass("hide");
+    dbDiv.addClass("hide");
     configDiv.removeClass("hide");
     $(".configBut1").addClass("loaded");
     $(".modelBut1").removeClass("loaded");
     $(".owBut1").removeClass("loaded");
     $(".gmBut1").removeClass("loaded");
+    $(".dbBut1").removeClass("loaded");
 })
 
 
@@ -91,11 +100,13 @@ owButton.on("click", () => {
     modelDiv.addClass("hide");
     configDiv.addClass("hide");
     gmDiv.addClass("hide");
+    dbDiv.addClass("hide");
     owDiv.removeClass("hide");
     $(".owBut1").addClass("loaded");
     $(".modelBut1").removeClass("loaded");
     $(".configBut1").removeClass("loaded");
     $(".gmBut1").removeClass("loaded");
+    $(".dbBut1").removeClass("loaded");
 })
 // Side navbar button
 $(".owBut1").on("click", () => {
@@ -103,11 +114,13 @@ $(".owBut1").on("click", () => {
     modelDiv.addClass("hide");
     configDiv.addClass("hide");
     gmDiv.addClass("hide");
+    dbDiv.addClass("hide");
     owDiv.removeClass("hide");
     $(".owBut1").addClass("loaded");
     $(".modelBut1").removeClass("loaded");
     $(".configBut1").removeClass("loaded");
     $(".gmBut1").removeClass("loaded");
+    $(".dbBut1").removeClass("loaded");
 })
 
 // GOOGLE MAPS API
@@ -118,11 +131,13 @@ gmButton.on("click", () => {
     modelDiv.addClass("hide");
     configDiv.addClass("hide");
     owDiv.addClass("hide");
+    dbDiv.addClass("hide");
     gmDiv.removeClass("hide");
     $(".gmBut1").addClass("loaded");
     $(".owBut1").removeClass("loaded");
     $(".modelBut1").removeClass("loaded");
     $(".configBut1").removeClass("loaded");
+    $(".dbBut1").removeClass("loaded");
 })
 // Side navbar button
 $(".gmBut1").on("click", () => {
@@ -130,9 +145,44 @@ $(".gmBut1").on("click", () => {
     modelDiv.addClass("hide");
     configDiv.addClass("hide");
     owDiv.addClass("hide");
+    dbDiv.addClass("hide");
     gmDiv.removeClass("hide");
     $(".gmBut1").addClass("loaded");
     $(".owBut1").removeClass("loaded");
     $(".modelBut1").removeClass("loaded");
     $(".configBut1").removeClass("loaded");
+    $(".dbBut1").removeClass("loaded");
+})
+
+
+// DATABASE FILE
+
+// Homepage button
+dbButton.on("click", () => {
+    bioDiv.addClass("hide");
+    modelDiv.addClass("hide");
+    configDiv.addClass("hide");
+    owDiv.addClass("hide");
+    gmDiv.addClass("hide");
+    dbDiv.removeClass("hide");
+    $(".gmBut1").removeClass("loaded");
+    $(".owBut1").removeClass("loaded");
+    $(".modelBut1").removeClass("loaded");
+    $(".configBut1").removeClass("loaded");
+    $(".dbBut1").addClass("loaded");
+})
+
+// Side navbar buttton
+$(".dbBut1").on("click", () => {
+    bioDiv.addClass("hide");
+    modelDiv.addClass("hide");
+    configDiv.addClass("hide");
+    owDiv.addClass("hide");
+    gmDiv.addClass("hide");
+    dbDiv.removeClass("hide");
+    $(".gmBut1").removeClass("loaded");
+    $(".owBut1").removeClass("loaded");
+    $(".modelBut1").removeClass("loaded");
+    $(".configBut1").removeClass("loaded");
+    $(".dbBut1").addClass("loaded");
 })
