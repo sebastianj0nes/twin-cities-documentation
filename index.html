@@ -28,7 +28,7 @@
   <div class="container" id="bioDiv">
     <section> 
       <h2> Twin Cities Summary:</h2>
-      <p class="lead">Application that retrieves and displays information about two cities from a mySQL database, weather data from OpenWeather API to be displayed in a map, using Google Maps API with points of interests as markers on the map.</p>
+      <p class="lead">Application that retrieves and displays information about two cities from a mySQL database, weather data from OpenWeather API to be displayed with a map, using Google Maps API with points of interests as markers on the map.</p>
       <h3>The website provides in-depth technical documentation on system design, code implementation and database
         maintenance.</h3>
       <p class="lead">Documentation follows a logical flow, starting with design following up with implementation.</p>
@@ -65,14 +65,14 @@
         </div>
         <div class="col-10" id="mainCol">
           <h1 class="default text-center">Models & Design:</h1>
-          <h2 class="default">The application pulls data from a populated database of twinning cities</h2>
+          <h3 class="default">The application pulls data from a populated database of twinning cities</h3>
           <p class="lead"> To help conceptualise how our data would interact and be stored in the database, we created a
             conceptual and logical entity-relationship model.</br> Using Astah & mySQL to help render the models.</p>
             <p class="lead">The database is populated with information from Edinburgh (Scotland) and Munich (Germany) -
               these cities both have relatively large populations so they will have sufficient data to build our
               application from. </p>
           <div class="container">
-            <h4 class="default">Conceptual Model:</h4>
+            <h3 class="default">Conceptual Model:</h3>
             <div class="row">
               <div class="col">
                 <img src="./assets/images/assignment_conceptual.png" alt="Twin Cities Conceptual Model" class="models">
@@ -86,7 +86,7 @@
                   <li>Forecast</li>
                   <li>Images</li>
                 </ul>
-                <p class="lead">Each entity has attributes to help populate the database. </br> For example the 'city'
+                <p class="lead">Each entity has attributes to populate the database with. </br> For example the 'city'
                   entity has an id, name, lat/lon and population.</p>
                 <a href="./assets/models/Conceptual_model .asta" class="btn btn-lg btn-primary" download>Download
                   Conceptual Model</a>
@@ -94,7 +94,7 @@
             </div>
           </div>
           <div class="container">
-            <h4 class="default">Logical Model:</h4>
+            <h3 class="default">Logical Model:</h3>
             <div class="row">
               <div class="col">
                 <img src="./assets/images/assignment_logical_ER.png" alt="Twin Cities Conceptual Model" class="models">
@@ -133,9 +133,10 @@
         </div>
         <div class="col-10" id="mainCol">
           <h1 class="default text-center">Configuration File:</h1>
-          <h2 class="default">The configuration file is used to hold global data and constants including API keys, static data and configuration data</h2>
+          <h3 class="default">The configuration file is used to hold global data and constants including API keys, static data and configuration data</h3>
           <p class="lead">The configuration file is coded in PHP. </br> There are many methods and functions we can use in the configuration to prevent repetition in code. The config file is imported into all relevant files to share data and constants.</p>
-          <h4 class="default">To initialise the configuration file, a namespace and timezone is set.</h4>
+          <h3 class="default">To initialise the configuration file, a namespace and timezone is set.</h3>
+        </br>
           <div class="row">
             <div class="col">
               <img src="./assets/images/namespace().png" alt="Initialising namespace and timezone in PHP config file" class="code">
@@ -156,9 +157,11 @@
         <p class="lead"><strong>OW_API</strong> is the key with the API being the value. The same for <strong>G_MAPS_API</strong>.
         </br> The constants 'OW_API' and 'G_MAPS_API' can be used in the API query instead of manually writing the key each time.
         </p>
+
         <h3>$cities array</h3>
         <img src="./assets/images/$cities.png" alt="Defining cities marker" class="code">
         <p class="lead">The $cities variable is being initialised with <strong>values such as name, co-ords and API calls</strong> from each city, in an array. To add more values or update values to different cities, the values only must be <strong> changed once in the configuration file.</strong> The <strong>'places[ ]'</strong> array holds the name and co-ords of specific points of interest, which can be looped through to add to the map. </p>
+        <img src="./assets/images/munich array(config).png" alt="Defining munich array" class="code">
         
         <h3>Error Handler</h3>
         <p class="lead">The config file also holds an error handler.</p>
@@ -194,7 +197,6 @@
           <p class="lead">After calling the weather data using the URL in the config file, it must be formatted and structured to be interpreted by the application.</p>
           <img src="./assets/images/$cities and $city.png" alt="Initialising ciurrent weather data" class="code">
           <p class="lead">This code is in the <strong>cities.php</strong> file. $city stores the current city that needs to be queried.</p>
-          <p class="lead">json_encode methods allow our weather data to be stored in JSON format, which is more easily traversed, to retrieve the right information.</p>
           <img src="./assets/images/convertToArray.png" alt="Converting weather data to array" class="code">
           <p class="lead">Storing the right cities data in $url and then converting $url to an array.</p>
         </br>
@@ -217,9 +219,10 @@
             <div class="col">
               <img src="./assets/images/genWeatherIcon.png" alt="Generate Weather Icon function">
             </div>
-            <div class="col">
+            <div class="col pt-2">
               <p class="lead">The 'generateWeatherIcon' function holds a switch statement, with a range of different weather environments. The switch statement takes $cloudType as an argument and depending on the value pulled from the API, it will display the correct weather icon.</p> 
-              <p class="lead"> These icons are displayed in the forecast table.</p>
+              <p class="lead">These icons are displayed in the forecast table.</p>
+              <p class="lead">Each case returns a $result with the appropriate named icon to be displayed.</p>
             </div>
           </div>
         </div>
@@ -246,12 +249,18 @@
           <h1 class="default text-center">Google Maps API:</h1>
           <h2 class="default">Using the Google Maps documentation to initialise and configure our map</h2>
           <p class="lead">Full Google Maps documentation can be found <a href="https://developers.google.com/maps/documentation" target="_blank">here.</a></p>
-          <p class="lead">First, we need to <strong>initalise the map </strong>to add content and append markers to it.</p>
+          <h3>Initialising the map</h3>
+          <p class="lead">First, we need to <strong>initalise the map </strong>to add content and append markers to it. A constant 'GoogAPI' is declared in Javascript, to store the API value from the configuration file. 'GoogAPI' is required to allow the API key to be used in Javascript.</p>
+          <p class="lead">The whole map is wrapped in the initMap() function.</p>
           <img src="./assets/images/initMap().png" alt="Initialising map function" class="code">
-          <p class="lead">Using the <strong>initMap() function </strong>, we pass in options as an object to determine how the map is displayed. During implementation we chose 'zoom:12' , but the zoom can be changed to liking.</p>
-          </br>
-          <img src="./assets/images/mapVar.png" alt="Creating map instance in a variable" class="code">
-          <p class="lead">From here we create a new map instance, calling the API, also passing in our options as an argument to define how our map looks.</p>
+          <p class="lead">We create an object for the map options, to determine it is displayed. During implementation we chose 'zoom:12' , but the zoom can be changed to liking.</p>
+          <img src="./assets/images/jsonEncode.png" alt="Encoding data into JSON format" class="code">
+          <p class="lead">The center of the map takes in a JSON encoded version of the places and co-ordinates, to create a dynamic center of the map.</p>
+          <h3>Creating map instance and adding markers</h3>
+          <p class="lead">We then create a new map instance, also passing in the options object as an argument to render the map.</p>
+          <img src="./assets/images/mapInstance.png" alt="New map instance" class="code">
+          <p class="lead">The var 'places' uses the JSON encoded version of places.</p>
+          <p class="lead">A 'for' loop is used to loop through all the places to call the addMarker function to add markers onto the map.</p>
           <div class="row pt-4">
             <div class="col">
               <img src="./assets/images/div(map).png" alt="Divider with id of map" class="code">
@@ -260,9 +269,26 @@
               <p class="lead">The 'var map' selects the div in the HTML with 'id=map' using 'document.getElementById'. </p>
             </div>
           </div>
-          <p class="lead">To add points of interest onto the map, an array of markers holds information for each city.
-            This example uses Edinburgh, but Munich has a similarly structured array. As the information about the markers isn't going to change, we store it in the <button class="btn btn-sm configBut">configuration file</button></p>
-            <img src="./assets/images/markers[].png" alt="Markers array of edinburgh" class="code">
+          <h3>Add markers function</h3>
+          <p class="lead">To add markers for our points of interest, a javascript function is used called addMarkers.</p>
+          <div class="row">
+            <div class="col">
+              <img src="./assets/images/addMarkers func.png" alt="Add marker function for Map" class="code">
+            </div>
+            <div class="col">
+              <p class="lead">Passing in 'place' argument - which will be used to pass in the 'places' variable. (See next section)</p>
+              <p class="lead">Inside the function is a variable 'marker' which will be used for each individual point of interest.</p>
+              <p class="lead">Options are passed into the marker variable using the .Marker method from the Google Maps API.</p>
+              <p class="lead">The 'if (place[3]' checks the validation of content, to ensure all data is correct.</p>
+            </div>
+            </div>
+            <p class="lead">Each marker has an event listener, using '.addListener' to add functionality when a user hovers in and out on a marker, which will then display information about each marker. Upon click, the URL of the website changes to display photos and information about each marker.</p>
+          <h3>Points of interest</h3>
+          <p class="lead">The points of interest were chosen by the team, trying to find the most unique places for each city.</p>
+          <p class="lead">The points of interest can be found in the configuration file.</p>
+          <p class="lead">Points of interest are found in the '$placesJson' variable - which calls the $cities array which holds arrays for both Edinburgh and Munich. </p>
+          <p class="lead">The traversal of the $cities array can be done after the right city is retrieved using the $_REQUEST method. After this, places can be found using $cities[$city]['places'];</p>
+          <img src="./assets/images/jsonEncode.png" alt="JSON encoded data">
         </div>
       </div>
     </section>

@@ -1,8 +1,12 @@
 :root{
     --mainBackground: #264653;
     --mainText: #fefae0;
+    --mainLinks: #fb8500;
 }
 
+a{
+    color: var(--mainLinks);
+}
 .btn{
     background-color: var(--mainBackground);
     color: var(--mainText);
@@ -62,6 +66,6 @@ section {
     color: var(--mainText);
 }
 
-h3{
+h2, h3{
     border-bottom: 2px solid black;
 }
