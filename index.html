@@ -33,6 +33,33 @@
         maintenance.</h3>
       <p class="lead">Documentation follows a logical flow, starting with design following up with implementation.</p>
       <p class="lead">Before reading the documentation, it's highly recommended to familiarise yourself with the application structure and page layouts, to help understand where the relevant information is stored. This can be viewed in the <a href="https://github.com/sebastianj0nes/twin-cities-application" target="_blank">Github.</a> </p>
+      <h3>Tech Stack:</h3>
+      <p class="lead">The technology used includes; PHP, Javascript, HTML & mySQL.</p>
+      <div class="row">
+        <div class="col">
+          <p class="lead">PHP ; </p>
+          <ul>
+            <li>Configuration file - holding all data & functions</li>
+            <li>Querying data from Openweather API</li>
+            <li>Inserting HTML to be displayed to user</li>
+          </ul>
+        </div>
+        <div class="col">
+          <p class="lead">Javascript;</p>
+          <ul>
+            <li>Creating functions & variables to store data</li>
+            <li>Host Map using Google Maps API</li>
+          </ul>
+        </div>
+        <div class="col">
+          <p class="lead">mySQL </p>
+          <ul>
+            <li>Holding relevant information about cities</li>
+            <li>Creating tables to pull data </li>
+          </ul>
+        </div>
+      </div>
+      
       <h3> Index: </h3>
       <div class="list-group">
         <button class="list-group-item list-group-item-action modelBut">Models & Design </button>
@@ -198,7 +225,7 @@
           <h3>Current Weather Data</h3>
           <p class="lead">After calling the weather data using the URL in the config file, it must be formatted and structured to be interpreted by the application.</p>
           <img src="./assets/images/$cities and $city.png" alt="Initialising ciurrent weather data" class="code">
-          <p class="lead">This code is in the <strong>cities.php</strong> file. $city stores the current city that needs to be queried.</p>
+          <p class="lead">The $city variable stores the current city that needs to be queried, from either Munich or Edinburgh based on which URL is used (changed by clicking on button in application navbar).</p>
           <img src="./assets/images/convertToArray.png" alt="Converting weather data to array" class="code">
           <p class="lead">Storing the right cities data in $url and then converting $url to an array.</p>
         </br>
