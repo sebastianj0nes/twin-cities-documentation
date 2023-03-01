@@ -134,7 +134,8 @@
         <div class="col-10" id="mainCol">
           <h1 class="default text-center">Configuration File:</h1>
           <h3 class="default">The configuration file is used to hold global data and constants including API keys, static data and configuration data</h3>
-          <p class="lead">The configuration file is coded in PHP. </br> There are many methods and functions we can use in the configuration to prevent repetition in code. The config file is imported into all relevant files to share data and constants.</p>
+          <p class="lead">The configuration file can be found <a href="https://github.com/sebastianj0nes/twin-cities-application/blob/main/config.php" target="_blank">here.</a></p>
+          <p class="lead">There are many methods and functions we can use in the configuration to prevent repetition in code. The config file is imported into all relevant files to share data and constants.</p>
           <h3 class="default">To initialise the configuration file, a namespace and timezone is set.</h3>
         </br>
           <div class="row">
@@ -192,6 +193,7 @@
           <h1 class="default text-center">Openweather Map API:</h1>
           <h2 class="default">Using the Openweather Map documentation to call weather data for our cities</h2>
           <p class="lead">Full Openweather Map documentation can be found <a href="https://openweathermap.org/api" target="_blank">here.</a></p>
+          <p class="lead">The following section of code can be found in the <a href="https://github.com/sebastianj0nes/twin-cities-application/blob/main/config.php" target="_blank">config.php file</a> and the <a href="https://github.com/sebastianj0nes/twin-cities-application/blob/main/pages/cities.php" target="_blank">cities.php file</a></p>
           <p class="lead">The application uses Openweather Map API for weather forecast, as there is a lot of documentation to help query the right data.</p>
           <h3>Current Weather Data</h3>
           <p class="lead">After calling the weather data using the URL in the config file, it must be formatted and structured to be interpreted by the application.</p>
@@ -249,6 +251,7 @@
           <h1 class="default text-center">Google Maps API:</h1>
           <h2 class="default">Using the Google Maps documentation to initialise and configure our map</h2>
           <p class="lead">Full Google Maps documentation can be found <a href="https://developers.google.com/maps/documentation" target="_blank">here.</a></p>
+          <p class="lead">The map is initialised in the <a href="https://github.com/sebastianj0nes/twin-cities-application/blob/main/pages/cities.php" target="_blank">cities.php</a> file</p>
           <h3>Initialising the map</h3>
           <p class="lead">First, we need to <strong>initalise the map </strong>to add content and append markers to it. A constant 'GoogAPI' is declared in Javascript, to store the API value from the configuration file. 'GoogAPI' is required to allow the API key to be used in Javascript.</p>
           <p class="lead">The whole map is wrapped in the initMap() function.</p>
