@@ -249,10 +249,29 @@ $(".dbBut1").on("click", () => {
 
 
 // Hover on image to change photo
+// NAVBAR
 $("#navbarImage").on("mouseover", () => {
     $("#navbarImage").attr("src","./assets/images/navbarCode.png");
 })
-
 $("#navbarImage").on("mouseout", () => {
     $("#navbarImage").attr("src","./assets/images/navBar.png");
 })
+
+// MAP
+$("#mapImage").on("mouseover", () => {
+    $("#mapImage").attr("src","./assets/images/twinMapCode.png");
+})
+
+$("#mapImage").on("mouseout", () => {
+    $("#mapImage").attr("src","./assets/images/twinMap.png");
+})
+
+// WEATHER
+$("#weatherImage").on("mouseover", () => {
+    $("#weatherImage").attr("src","./assets/images/currentCode.png");
+})
+
+$("#weatherImage").on("mouseout", () => {
+    $("#weatherImage").attr("src","./assets/images/currentweather.png");
+})
+
