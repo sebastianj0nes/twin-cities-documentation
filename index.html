@@ -32,6 +32,7 @@
       <h3>The website provides in-depth technical documentation on system design, code implementation and database
         maintenance.</h3>
       <p class="lead">Documentation follows a logical flow, starting with design following up with implementation.</p>
+      <p class="lead">Before reading the documentation, it's highly recommended to familiarise yourself with the application structure and page layouts, to help understand where the relevant information is stored. This can be viewed in the <a href="https://github.com/sebastianj0nes/twin-cities-application" target="_blank">Github.</a> </p>
       <h3> Index: </h3>
       <div class="list-group">
         <button class="list-group-item list-group-item-action modelBut">Models & Design </button>
@@ -155,11 +156,14 @@
         <p class="lead"><strong>OW_API</strong> is the key with the API being the value. The same for <strong>G_MAPS_API</strong>.
         </br> The constants 'OW_API' and 'G_MAPS_API' can be used in the API query instead of manually writing the key each time.
         </p>
-        <img src="./assets/images/define(edinburgh).png" alt="Defining edinburgh constant" class="code">
-        <p class="lead">The constant Edinburgh is being initialised with <strong>values such as name, co-ords and API calls.</strong> To add more values or update values to different cities, the values only must be <strong> changed once in the configuration file.</strong> The <strong>'markers[ ]'</strong> array holds the name and co-ords of specific points of interest, which can be looped through to add to the map. </p>
-        <img src="./assets/images/edinburgh[name].png" alt="Calling values of edinburgh constant" class="code">
-        <p class="lead">The values defined in the constant Edinburgh can be returned using <strong>Edinburgh['value']</strong></p>
-        <p></p>
+        <h3>$cities array</h3>
+        <img src="./assets/images/$cities.png" alt="Defining cities marker" class="code">
+        <p class="lead">The $cities variable is being initialised with <strong>values such as name, co-ords and API calls</strong> from each city, in an array. To add more values or update values to different cities, the values only must be <strong> changed once in the configuration file.</strong> The <strong>'places[ ]'</strong> array holds the name and co-ords of specific points of interest, which can be looped through to add to the map. </p>
+        
+        <h3>Error Handler</h3>
+        <p class="lead">The config file also holds an error handler.</p>
+        <img src="./assets/images/error handler.png" alt="Error handler function" class="code">
+        <p class="lead">The function takes in the error number, error message, file location and the line of the error as arguments in the function. From this it will echo an error message to the user to help identify where the bug has been caused.</p>
       </div>
       </div>
     </section>
@@ -183,6 +187,41 @@
         </div>
         <div class="col-10" id="mainCol">
           <h1 class="default text-center">Openweather Map API:</h1>
+          <h2 class="default">Using the Openweather Map documentation to call weather data for our cities</h2>
+          <p class="lead">Full Openweather Map documentation can be found <a href="https://openweathermap.org/api" target="_blank">here.</a></p>
+          <p class="lead">The application uses Openweather Map API for weather forecast, as there is a lot of documentation to help query the right data.</p>
+          <h3>Current Weather Data</h3>
+          <p class="lead">After calling the weather data using the URL in the config file, it must be formatted and structured to be interpreted by the application.</p>
+          <img src="./assets/images/$cities and $city.png" alt="Initialising ciurrent weather data" class="code">
+          <p class="lead">This code is in the <strong>cities.php</strong> file. $city stores the current city that needs to be queried.</p>
+          <p class="lead">json_encode methods allow our weather data to be stored in JSON format, which is more easily traversed, to retrieve the right information.</p>
+          <img src="./assets/images/convertToArray.png" alt="Converting weather data to array" class="code">
+          <p class="lead">Storing the right cities data in $url and then converting $url to an array.</p>
+        </br>
+          <h3>Current Weather Variables</h3>
+          <p class="lead">Using the available data, we then initialise appropriately named variables to hold the data.</p>
+          <img src="./assets/images/currentWeatherVariables.png" alt="List of current weather variables">
+          <p class="lead">These variables will be echo'd to display the relevant information in a table, such as weather condition, temperature & humidity.</p>
+
+          <h3> Forecast Weather Data</h3>
+          <p class="lead">The application also displays forecast data.</p>
+          <img src="./assets/images/forecastWeather.png" alt="Forecast Weather Variables" class="code">
+          <p class="lead">These variables are used to hold relevant information to store and traverse through the forecast data. The forecast is converted into an array to easily traverse through relevant info.
+          </p>
+          <h3>Forecast Weather Variables</h3>
+          <img src="./assets/images/looping through forecast.png" alt="Looping through forecast weather data" class="code">
+          <p class="lead">Using a 'foreach' loop, we can loop through all the forecast data without repeating code.</p>
+          <p class="lead">The '$forecastData' array will store all the data for each day in a separate index, starting at 1 using '$i' as a counter to iterate through data.</p>
+          <h3>Forecast Weather Icon</h3>
+          <div class="row">
+            <div class="col">
+              <img src="./assets/images/genWeatherIcon.png" alt="Generate Weather Icon function">
+            </div>
+            <div class="col">
+              <p class="lead">The 'generateWeatherIcon' function holds a switch statement, with a range of different weather environments. The switch statement takes $cloudType as an argument and depending on the value pulled from the API, it will display the correct weather icon.</p> 
+              <p class="lead"> These icons are displayed in the forecast table.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -205,7 +244,7 @@
         </div>
         <div class="col-10" id="mainCol">
           <h1 class="default text-center">Google Maps API:</h1>
-          <h2 class="default">Using the available documentation to initialise and configure our map</h2>
+          <h2 class="default">Using the Google Maps documentation to initialise and configure our map</h2>
           <p class="lead">Full Google Maps documentation can be found <a href="https://developers.google.com/maps/documentation" target="_blank">here.</a></p>
           <p class="lead">First, we need to <strong>initalise the map </strong>to add content and append markers to it.</p>
           <img src="./assets/images/initMap().png" alt="Initialising map function" class="code">

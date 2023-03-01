@@ -62,3 +62,6 @@ section {
     color: var(--mainText);
 }
 
+h3{
+    border-bottom: 2px solid black;
+}
