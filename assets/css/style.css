@@ -56,7 +56,8 @@ section {
 .modelBut:hover,
 .owBut:hover,
 .configBut:hover,
-.gmBut:hover{
+.gmBut:hover,
+.dbBut:hover{
     background-color: var(--mainBackground);
     color: var(--mainText);
 }

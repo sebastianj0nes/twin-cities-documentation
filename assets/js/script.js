@@ -7,6 +7,7 @@ const modelButton = $(".modelBut");
 const configButton = $(".configBut");
 const owButton = $(".owBut");
 const gmButton = $(".gmBut");
+const dbButton = $(".dbBut");
 
 // DIVS
 const bioDiv = $("#bioDiv");
@@ -14,6 +15,7 @@ const modelDiv = $("#modelDiv");
 const configDiv = $("#configDiv");
 const owDiv = $("#owDiv");
 const gmDiv = $("#gmDiv");
+const dbDiv = $("#dbDiv");
 
 
 // HOME BUTTON (navbar)
