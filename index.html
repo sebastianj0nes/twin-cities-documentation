@@ -388,7 +388,20 @@
         </div>
         <div class="col-10" id="mainCol">
           <h1 class="default text-center">Database Implementation: </h1>
-          <h3>Using mySQL</h3>
+          <h3>Using mySQL and PHPMyAdmin to host data</h3>
+          <p class="lead">With PHPMyAdmin, a tool for editing databases, we can create and query the data stored in our database.</p>
+          <h3>Making a connection to the database</h3>
+          <div class="row">
+            <div class="col">
+              <img src="./assets/images/databaseVariables.png" alt="Initialising database with php" class="code">
+            </div>
+            <div class="col">
+              <p class="text-muted text-center">This data is stored in the config.php file. It's accessed in other files using "require 'config.php"</p>
+            </div>
+          </div>
+          <p class="lead">Firstly, we have to create a connection to the database. As we are using XAMPP to host the data, the server will be localhost. We store this in $servername.</p>
+          <p class="lead">As it's a locally-hosted database, the $username is 'root' and there is no $password.</p>
+          <p class="lead">The name of the database is set when creating the database. For this instance it has been appropriately named "twin_cities".</p>
       </div>
     </section>
   </div>
