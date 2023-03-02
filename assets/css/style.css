@@ -7,7 +7,13 @@
 
 a{
     color: var(--mainLinks);
+    transition: 0.3s;
 }
+
+a:hover{
+    font-size: 25px;
+}
+
 .btn{
     background-color: var(--mainBackground);
     color: var(--mainText);
@@ -62,6 +68,17 @@ section {
 .structBut:hover{
     background-color: var(--mainBackground);
     color: var(--mainText);
+    font-size: 27px;
+    transition: 0.4s;
+}
+
+.modelBut,
+.owBut,
+.configBut,
+.gmBut,
+.dbBut,
+.structBut{
+    transition: 0.4s;
 }
 
 .loaded{
