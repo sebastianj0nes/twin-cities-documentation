@@ -47,7 +47,7 @@
         <div class="col">
           <p class="lead">Javascript;</p>
           <ul>
-            <li>Creating functions & variables to store data</li>
+            <li>Creating functions & variables to help configure webpage</li>
             <li>Host Map using Google Maps API</li>
           </ul>
         </div>
@@ -55,7 +55,7 @@
           <p class="lead">mySQL </p>
           <ul>
             <li>Holding relevant information about cities</li>
-            <li>Creating tables to pull data </li>
+            <li>Creating tables based off chosen entities and attributes</li>
           </ul>
         </div>
       </div>
@@ -353,7 +353,7 @@
               <p class="lead">Passing in 'place' argument - which will be used to pass in the 'places' variable. (See next section)</p>
               <p class="lead">Inside the function is a variable 'marker' which will be used for each individual point of interest.</p>
               <p class="lead">Options are passed into the marker variable using the .Marker method from the Google Maps API.</p>
-              <p class="lead">The 'if (place[3]' checks the validation of content, to ensure all data is correct.</p>
+              <p class="lead">The 'if (place[3])' checks the validation of content, to ensure all data is correct.</p>
             </div>
             </div>
             <p class="lead">Each marker has an event listener, using '.addListener' to add functionality when a user hovers in and out on a marker, which will then display information about each marker. Upon click, the URL of the website changes to display photos and information about each marker.</p>
@@ -391,6 +391,39 @@
           <h3>Using mySQL and PHPMyAdmin to host data</h3>
           <p class="lead">Using mySQL as a server for the data syngerising with PHPMyAdmin, a tool for editing databases, we can create and query the data stored in our database.</p>
           <p class="lead">Full mySQL documentation can be found <a href="https://dev.mysql.com/doc/refman/8.0/en/" target="_blank">here.</a></p>
+          <h3>Creating tables using SQL</h3>
+          <p class="lead">To create a mySQL database, we first create the relevant tables of the entities from our models.</p>
+          <div class="col">
+            <div class="row">
+              <p class="lead">These tables hold information about the City, and Images</p>
+              <img class="col-6" src="./assets/images/cityTable.png" alt="City Table">
+              <img class="col-6" src="./assets/images/imageTable.png" alt="Image Table">
+            </div>
+            <div class="row">
+              <p class="lead">These tables hold information about the Places Of Interest, Place Type & Type</p>
+              <img class="col-4" src="./assets/images/placeTable.png" alt="Place Of Interest Table">
+              <img class="col-4" src="./assets/images/placeTypeTable.png" alt="Place Type Table">
+              <img class="col-4" src="./assets/images/typeTable.png" alt="Type Table">
+            </div>
+          </div>
+          <h3>Inserting information into the database</h3>
+          <p class="lead">Then, after the appropriate table have been created, we can run INSERT commands with SQL to add the relevant information. These screenshots are snippets of the full code, with each table having more INSERTs than the ones shown</p>
+          <div class="col">
+            <div class="row">
+              <p class="lead">These queries will use the syntax previously defined in the unique CREATE tables.</p>
+              <img class="code" src="./assets/images/insertCity.png" alt="Insert info into city">
+              <p class="lead">For Munich & Edinburgh they both have separate "INSERT" commands with unique data</p>
+              <img class="code" src="./assets/images/insertImage.png" alt="Insert info into image">
+            </div>
+            <div class="row">
+              <p class="lead">For each place of interest, there will be an "INSERT" command to add relevant info to the table</p>
+              <img class="code" src="./assets/images/insertPlace.png" alt="Insert info into place of interest">
+              <p class="lead">Inserting information into place type</p>
+              <img class="code" src="./assets/images/insertPlaceType.png" alt="Insert info into place type">
+              <p class="lead">Inserting information into type</p>
+              <img class="code" src="./assets/images/insertType.png" alt="Insert info into type">
+            </div>
+          </div>
           <h3>Making a connection to the database</h3>
           <div class="row">
             <div class="col">
@@ -400,15 +433,13 @@
               <p class="text-muted text-center">This data is stored in the config.php file. It's accessed in other files using "require 'config.php"</p>
             </div>
           </div>
-          <p class="lead">Firstly, we have to create a connection to the database. As we are using XAMPP to host the data, the server will be localhost. We store this in $servername.</p>
-          <p class="lead">As it's a locally-hosted database, the $username is 'root' and there is no $password.</p>
-          <p class="lead">The name of the database is set when creating the database. For this instance it has been appropriately named "twin_cities".</p>
+          <p class="lead">After the database is created we can create a connection to the server. The configuration file holds constants to connect, such as the DB name and password etc. As we are using XAMPP to host the data, the server will be localhost.</p>
+          <p class="lead">We can use a define() method to create an array for all the parameters to connect to the database.</p>
+          <p class="lead">The constants can be used by calling "DBMS['example']" replacing example with the required property. The application uses a conn.php file to hold the database connection object.</p>
+          <img src="./assets/images/connPhp.png" alt="PHP Data Object" class="code">
       </div>
     </section>
   </div>
-
-
-
 
 
   <!-- Bootstrap -->
