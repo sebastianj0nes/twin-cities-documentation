@@ -407,7 +407,8 @@
             </div>
           </div>
           <h3>Inserting information into the database</h3>
-          <p class="lead">Then, after the appropriate table have been created, we can run INSERT commands with SQL to add the relevant information. These screenshots are snippets of the full code, with each table having more INSERTs than the ones shown</p>
+          <p class="lead">Then, after the appropriate table have been created, we can run INSERT commands with SQL to add the relevant information.</p>
+           <p class="text-muted">These screenshots are snippets of the full code, with each table having more INSERTs than the ones shown</p>
           <div class="col">
             <div class="row">
               <p class="lead">These queries will use the syntax previously defined in the unique CREATE tables.</p>
@@ -435,8 +436,14 @@
           </div>
           <p class="lead">After the database is created we can create a connection to the server. The configuration file holds constants to connect, such as the DB name and password etc. As we are using XAMPP to host the data, the server will be localhost.</p>
           <p class="lead">We can use a define() method to create an array for all the parameters to connect to the database.</p>
-          <p class="lead">The constants can be used by calling "DBMS['example']" replacing example with the required property. The application uses a conn.php file to hold the database connection object.</p>
+          <p class="lead">The constants can be used by calling "DBMS['example']" replacing 'example' with the required property. The application uses a conn.php file to hold the database connection object.</p>
           <img src="./assets/images/connPhp.png" alt="PHP Data Object" class="code">
+          <h3>Pulling data from the database</h3>
+          <p class="lead">After the data is stored in the database, it can be pulled by preparing the $pdo with a query to run, retrieving specific information. In this example it pulls all information from the CITY table WHERE the city id's match up.</p>
+          <img src="./assets/images/$query.png" alt="Querying the database" class="code">
+          <p class="lead">Then, in this example we convert the returned data into an array, making it easier to pull out specific data e.g name.</p>
+          <img src="./assets/images/$urlArray.png" alt="Converting $query to $url and then to an array" class="code">
+
       </div>
     </section>
   </div>
