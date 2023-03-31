@@ -65,7 +65,8 @@ section {
 .configBut:hover,
 .gmBut:hover,
 .dbBut:hover,
-.structBut:hover{
+.structBut:hover,
+.feedBut:hover{
     background-color: var(--mainBackground);
     color: var(--mainText);
     font-size: 27px;
@@ -77,7 +78,8 @@ section {
 .configBut,
 .gmBut,
 .dbBut,
-.structBut{
+.structBut,
+.feedBut{
     transition: 0.4s;
 }
 

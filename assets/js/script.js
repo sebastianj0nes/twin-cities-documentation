@@ -9,6 +9,7 @@ const owButton = $(".owBut");
 const gmButton = $(".gmBut");
 const dbButton = $(".dbBut");
 const structButton = $(".structBut");
+const feedBut = $(".feedBut");
 
 // DIVS
 const bioDiv = $("#bioDiv");
@@ -18,6 +19,7 @@ const owDiv = $("#owDiv");
 const gmDiv = $("#gmDiv");
 const dbDiv = $("#dbDiv");
 const structDiv = $("#structDiv");
+const feedDiv = $("#feedDiv");
 
 
 // HOME BUTTON (navbar)
@@ -29,7 +31,8 @@ homeButton.on("click",() => {
     owDiv.addClass("hide");
     gmDiv.addClass("hide");
     dbDiv.addClass("hide");
-    
+    feedDiv.addClass("hide");
+
 })
 
 
@@ -43,12 +46,14 @@ modelButton.on("click", () => {
     owDiv.addClass("hide");
     gmDiv.addClass("hide");
     dbDiv.addClass("hide");
+    feedDiv.addClass("hide");
     modelDiv.removeClass("hide");
     $(".modelBut1").addClass("loaded");
     $(".structBut1").removeClass("loaded");
     $(".configBut1").removeClass("loaded");
     $(".owBut1").removeClass("loaded");
     $(".gmBut1").removeClass("loaded");
+    $(".feedBut1").removeClass("loaded");
     $(".dbBut1").removeClass("loaded");
 })
 // Side navbar button
@@ -59,12 +64,14 @@ $(".modelBut1").on("click", () => {
     owDiv.addClass("hide");
     gmDiv.addClass("hide");
     dbDiv.addClass("hide");
+    feedDiv.addClass("hide");
     modelDiv.removeClass("hide");
     $(".modelBut1").addClass("loaded");
     $(".structBut1").removeClass("loaded");
     $(".configBut1").removeClass("loaded");
     $(".owBut1").removeClass("loaded");
     $(".gmBut1").removeClass("loaded");
+    $(".feedBut1").removeClass("loaded");
     $(".dbBut1").removeClass("loaded");
 })
 
@@ -78,12 +85,14 @@ structButton.on("click", () => {
     gmDiv.addClass("hide");
     dbDiv.addClass("hide");
     modelDiv.addClass("hide");
+    feedDiv.addClass("hide");
     structDiv.removeClass("hide");
     $(".structBut1").addClass("loaded");
     $(".modelBut1").removeClass("loaded");
     $(".configBut1").removeClass("loaded");
     $(".owBut1").removeClass("loaded");
     $(".gmBut1").removeClass("loaded");
+    $(".feedBut1").removeClass("loaded");
     $(".dbBut1").removeClass("loaded");
 })
 
@@ -95,12 +104,14 @@ $(".structBut1").on("click", () => {
     gmDiv.addClass("hide");
     dbDiv.addClass("hide");
     modelDiv.addClass("hide");
+    feedDiv.addClass("hide");
     structDiv.removeClass("hide");
     $(".structBut1").addClass("loaded");
     $(".modelBut1").removeClass("loaded");
     $(".configBut1").removeClass("loaded");
     $(".owBut1").removeClass("loaded");
     $(".gmBut1").removeClass("loaded");
+    $(".feedBut1").removeClass("loaded");
     $(".dbBut1").removeClass("loaded");
 })
 
@@ -114,12 +125,14 @@ configButton.on("click", () => {
     owDiv.addClass("hide");
     gmDiv.addClass("hide");
     dbDiv.addClass("hide");
+    feedDiv.addClass("hide");
     configDiv.removeClass("hide");
     $(".configBut1").addClass("loaded");
     $(".structBut1").removeClass("loaded");
     $(".modelBut1").removeClass("loaded");
     $(".owBut1").removeClass("loaded");
     $(".gmBut1").removeClass("loaded");
+    $(".feedBut1").removeClass("loaded");
     $(".dbBut1").removeClass("loaded");
 })
 // Side navbar button
@@ -130,12 +143,14 @@ $(".configBut1").on("click", () => {
     owDiv.addClass("hide");
     gmDiv.addClass("hide");
     dbDiv.addClass("hide");
+    feedDiv.addClass("hide");
     configDiv.removeClass("hide");
     $(".configBut1").addClass("loaded");
     $(".structBut1").removeClass("loaded");
     $(".modelBut1").removeClass("loaded");
     $(".owBut1").removeClass("loaded");
     $(".gmBut1").removeClass("loaded");
+    $(".feedBut1").removeClass("loaded");
     $(".dbBut1").removeClass("loaded");
 })
 
@@ -150,12 +165,14 @@ owButton.on("click", () => {
     configDiv.addClass("hide");
     gmDiv.addClass("hide");
     dbDiv.addClass("hide");
+    feedDiv.addClass("hide");
     owDiv.removeClass("hide");
     $(".owBut1").addClass("loaded");
     $(".structBut1").removeClass("loaded");
     $(".modelBut1").removeClass("loaded");
     $(".configBut1").removeClass("loaded");
     $(".gmBut1").removeClass("loaded");
+    $(".feedBut1").removeClass("loaded");
     $(".dbBut1").removeClass("loaded");
 })
 // Side navbar button
@@ -166,12 +183,14 @@ $(".owBut1").on("click", () => {
     configDiv.addClass("hide");
     gmDiv.addClass("hide");
     dbDiv.addClass("hide");
+    feedDiv.addClass("hide");
     owDiv.removeClass("hide");
     $(".owBut1").addClass("loaded");
     $(".structBut1").removeClass("loaded");
     $(".modelBut1").removeClass("loaded");
     $(".configBut1").removeClass("loaded");
     $(".gmBut1").removeClass("loaded");
+    $(".feedBut1").removeClass("loaded");
     $(".dbBut1").removeClass("loaded");
 })
 
@@ -185,12 +204,14 @@ gmButton.on("click", () => {
     configDiv.addClass("hide");
     owDiv.addClass("hide");
     dbDiv.addClass("hide");
+    feedDiv.addClass("hide");
     gmDiv.removeClass("hide");
     $(".gmBut1").addClass("loaded");
     $(".structBut1").removeClass("loaded");
     $(".owBut1").removeClass("loaded");
     $(".modelBut1").removeClass("loaded");
     $(".configBut1").removeClass("loaded");
+    $(".feedBut1").removeClass("loaded");
     $(".dbBut1").removeClass("loaded");
 })
 // Side navbar button
@@ -201,12 +222,14 @@ $(".gmBut1").on("click", () => {
     configDiv.addClass("hide");
     owDiv.addClass("hide");
     dbDiv.addClass("hide");
+    feedDiv.addClass("hide");
     gmDiv.removeClass("hide");
     $(".gmBut1").addClass("loaded");
     $(".structBut1").removeClass("loaded");
     $(".owBut1").removeClass("loaded");
     $(".modelBut1").removeClass("loaded");
     $(".configBut1").removeClass("loaded");
+    $(".feedBut1").removeClass("loaded");
     $(".dbBut1").removeClass("loaded");
 })
 
@@ -221,12 +244,14 @@ dbButton.on("click", () => {
     configDiv.addClass("hide");
     owDiv.addClass("hide");
     gmDiv.addClass("hide");
+    feedDiv.addClass("hide");
     dbDiv.removeClass("hide");
     $(".gmBut1").removeClass("loaded");
     $(".structBut1").removeClass("loaded");
     $(".owBut1").removeClass("loaded");
     $(".modelBut1").removeClass("loaded");
     $(".configBut1").removeClass("loaded");
+    $(".feedBut1").removeClass("loaded");
     $(".dbBut1").addClass("loaded");
 })
 
@@ -238,13 +263,56 @@ $(".dbBut1").on("click", () => {
     configDiv.addClass("hide");
     owDiv.addClass("hide");
     gmDiv.addClass("hide");
+    feedDiv.addClass("hide");
     dbDiv.removeClass("hide");
     $(".gmBut1").removeClass("loaded");
     $(".owBut1").removeClass("loaded");
     $(".structBut1").removeClass("loaded");
     $(".modelBut1").removeClass("loaded");
     $(".configBut1").removeClass("loaded");
+    $(".feedBut1").removeClass("loaded");
     $(".dbBut1").addClass("loaded");
+})
+
+
+// RSS FEED FILE
+
+// Homepage button
+feedBut.on("click", () => {
+    bioDiv.addClass("hide");
+    structDiv.addClass("hide");
+    modelDiv.addClass("hide");
+    configDiv.addClass("hide");
+    owDiv.addClass("hide");
+    gmDiv.addClass("hide");
+    dbDiv.addClass("hide");
+    feedDiv.removeClass("hide");
+    $(".gmBut1").removeClass("loaded");
+    $(".owBut1").removeClass("loaded");
+    $(".structBut1").removeClass("loaded");
+    $(".modelBut1").removeClass("loaded");
+    $(".configBut1").removeClass("loaded");
+    $(".dbBut1").removeClass("loaded");
+    $(".feedBut1").addClass("loaded");
+})
+
+// Sidebar Button
+$(".feedBut1").on("click", () => {
+    bioDiv.addClass("hide");
+    structDiv.addClass("hide");
+    modelDiv.addClass("hide");
+    configDiv.addClass("hide");
+    owDiv.addClass("hide");
+    gmDiv.addClass("hide");
+    dbDiv.addClass("hide");
+    feedDiv.removeClass("hide");
+    $(".gmBut1").removeClass("loaded");
+    $(".owBut1").removeClass("loaded");
+    $(".structBut1").removeClass("loaded");
+    $(".modelBut1").removeClass("loaded");
+    $(".configBut1").removeClass("loaded");
+    $(".dbBut1").removeClass("loaded");
+    $(".feedBut1").addClass("loaded");
 })
 
 
