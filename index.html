@@ -62,13 +62,13 @@
       
       <h3> Index: </h3>
       <div class="list-group">
-        <button class="list-group-item list-group-item-action modelBut">Models & Design </button>
         <button class="list-group-item list-group-item-action structBut">Page Structure</button>
         <button class="list-group-item list-group-item-action configBut">Configuration file</button>
         <button class="list-group-item list-group-item-action owBut">Openweather Map API</button>
         <button class="list-group-item list-group-item-action gmBut">Google Maps API</button>
         <button class="list-group-item list-group-item-action dbBut">Database</button>
         <button class="list-group-item list-group-item-action feedBut">RSS Feed</button>
+        <button class="list-group-item list-group-item-action modelBut">Helping Functions </button>
 
       </div>
     </section>
@@ -85,60 +85,42 @@
           <h4> Contents: </h4>
           <div class="list-group">
             <button class="list-group-item list-group-item-action homeBut">Home</button>
-            <button class="list-group-item list-group-item-action modelBut1">Models & Design</button>
             <button class="list-group-item list-group-item-action structBut1">Page Structure</button>
             <button class="list-group-item list-group-item-action configBut1">Configuration file</button>
             <button class="list-group-item list-group-item-action owBut1">Openweather Map API</button>
             <button class="list-group-item list-group-item-action gmBut1">Google Maps API</button>
             <button class="list-group-item list-group-item-action dbBut1">Database</button>
             <button class="list-group-item list-group-item-action feedBut1">RSS Feed</button>
+            <button class="list-group-item list-group-item-action modelBut1">Helping Functions</button>
           </div>
         </div>
         <div class="col-10" id="mainCol">
-          <h1 class="default text-center">Models & Design:</h1>
+          <h1 class="default text-center">Helping Functions:</h1>
           <h3 class="default">The application pulls data from a populated database of twinning cities</h3>
-          <p class="lead"> To help conceptualise how our data would interact and be stored in the database, we created a
-            conceptual and logical entity-relationship model.</br> Using Astah & mySQL to help render the models.</p>
-            <p class="lead">The database is populated with information from Edinburgh (Scotland) and Munich (Germany) -
-              these cities both have relatively large populations so they will have sufficient data to build our
-              application from. </p>
+          <p class="lead"> On the map displayed, there are points of interest and upon clicking it will display photos and more information about the POI's. </p>
+            <p class="lead"> </p>
           <div class="container">
-            <h3 class="default">Conceptual Model:</h3>
+            <h3 class="default">Flickr get_photo function</h3>
             <div class="row">
               <div class="col">
-                <img src="./assets/images/assignment_conceptual.png" alt="Twin Cities Conceptual Model" class="models">
+                <img src="./assets/images/getPhotoFunc.png" alt="Twin Cities Conceptual Model" class="models">
               </div>
               <div class="col">
-                <p class="lead">The model contains 5 entities;</p>
-                <ul class="lead">
-                  <li>City</li>
-                  <li>Places of interest</li>
-                  <li>Weather</li>
-                  <li>Forecast</li>
-                  <li>Images</li>
-                </ul>
-                <p class="lead">Each entity has attributes to populate the database with. </br> For example the 'city'
-                  entity has an id, name, lat/lon and population.</p>
-                <a href="./assets/models/Conceptual_model .asta" class="btn btn-lg btn-primary" download>Download
-                  Conceptual Model</a>
+                <p class="lead">The function takes in the name of the POI and number of photos as an argument</p>
+              <p> Then, the data is converted to an array, upon which the data can be separated and used in the $flickrImageUrl call to display photos from flickr.</p>
               </div>
             </div>
           </div>
           <div class="container">
-            <h3 class="default">Logical Model:</h3>
+            <h3 class="default">Convert data to array function</h3>
             <div class="row">
               <div class="col">
-                <img src="./assets/images/assignment_logical_ER.png" alt="Twin Cities Conceptual Model" class="models">
+                <img src="./assets/images/convertToArrayFunc.png" alt="Twin Cities Conceptual Model" class="models">
               </div>
               <div class="col">
-                <p class="lead">The logical model transforms the conceptual model into a low-level model to show all
-                  Primary & Foreign Keys.</p>
-                <p class="lead">When updating the database, the models will not have to change, unless another entity is
-                  appended.</p>
-                <p class="lead">This is because the data populating the database are examples of entities, so to add
-                  another place of interest to the database the current model is sufficient.</p>
-                <a href="./assets/models/logical_er_model.mwb" class="btn btn-lg btn-primary" download>Download Logical
-                  Model</a>
+                <p class="lead">This helping function is used to convert the given data to an array.</p>
+                <p class="lead">It takes in a url and data type, from XML or CSV. </p>
+                <p class="lead">Then, depending on the data type it uses a switch statement to appropriately open the file, loading the data.</p>
               </div>
             </div>
           </div>
@@ -156,13 +138,13 @@
           <h4> Contents: </h4>
           <div class="list-group">
             <button class="list-group-item list-group-item-action homeBut">Home</button>
-            <button class="list-group-item list-group-item-action modelBut1">Models & Design</button>
             <button class="list-group-item list-group-item-action structBut1">Page Structure</button>
             <button class="list-group-item list-group-item-action configBut1">Configuration file</button>
             <button class="list-group-item list-group-item-action owBut1">Openweather Map API</button>
             <button class="list-group-item list-group-item-action gmBut1">Google Maps API</button>
             <button class="list-group-item list-group-item-action dbBut1">Database</button>
             <button class="list-group-item list-group-item-action feedBut1">RSS Feed</button>
+            <button class="list-group-item list-group-item-action modelBut1">Helping Functions</button>
           </div>
         </div>
         <div class="col-10" id="mainCol">
@@ -196,13 +178,13 @@
           <h4> Contents: </h4>
           <div class="list-group">
             <button class="list-group-item list-group-item-action homeBut">Home</button>
-            <button class="list-group-item list-group-item-action modelBut1">Models & Design</button>
             <button class="list-group-item list-group-item-action structBut1">Page Structure</button>
             <button class="list-group-item list-group-item-action configBut1">Configuration file</button>
             <button class="list-group-item list-group-item-action owBut1">Openweather Map API</button>
             <button class="list-group-item list-group-item-action gmBut1">Google Maps API</button>
             <button class="list-group-item list-group-item-action dbBut1">Database</button>
             <button class="list-group-item list-group-item-action feedBut1">RSS Feed</button>
+            <button class="list-group-item list-group-item-action modelBut1">Helping Functions</button>
           </div>
         </div>
         <div class="col-10" id="mainCol">
@@ -255,13 +237,13 @@
           <h4> Contents: </h4>
           <div class="list-group">
             <button class="list-group-item list-group-item-action homeBut">Home</button>
-            <button class="list-group-item list-group-item-action modelBut1">Models & Design</button>
             <button class="list-group-item list-group-item-action structBut1">Page Structure</button>
             <button class="list-group-item list-group-item-action configBut1">Configuration file</button>
             <button class="list-group-item list-group-item-action owBut1">Openweather Map API</button>
             <button class="list-group-item list-group-item-action gmBut1">Google Maps API</button>
             <button class="list-group-item list-group-item-action dbBut1">Database</button>
             <button class="list-group-item list-group-item-action feedBut1">RSS Feed</button>
+            <button class="list-group-item list-group-item-action modelBut1">Helping Functions</button>
           </div>
         </div>
         <div class="col-10" id="mainCol">
@@ -315,13 +297,13 @@
           <h4> Contents: </h4>
           <div class="list-group">
             <button class="list-group-item list-group-item-action homeBut">Home</button>
-            <button class="list-group-item list-group-item-action modelBut1">Models & Design</button>
             <button class="list-group-item list-group-item-action structBut1">Page Structure</button>
             <button class="list-group-item list-group-item-action configBut1">Configuration file</button>
             <button class="list-group-item list-group-item-action owBut1">Openweather Map API</button>
             <button class="list-group-item list-group-item-action gmBut1">Google Maps API</button>
             <button class="list-group-item list-group-item-action dbBut1">Database</button>
             <button class="list-group-item list-group-item-action feedBut1">RSS Feed</button>
+            <button class="list-group-item list-group-item-action modelBut1">Helping Functions</button>
           </div>
         </div>
         <div class="col-10" id="mainCol">
@@ -384,13 +366,13 @@
           <h4> Contents: </h4>
           <div class="list-group">
             <button class="list-group-item list-group-item-action homeBut">Home</button>
-            <button class="list-group-item list-group-item-action modelBut1">Models & Design</button>
             <button class="list-group-item list-group-item-action structBut1">Page Structure</button>
             <button class="list-group-item list-group-item-action configBut1">Configuration file</button>
             <button class="list-group-item list-group-item-action owBut1">Openweather Map API</button>
             <button class="list-group-item list-group-item-action gmBut1">Google Maps API</button>
             <button class="list-group-item list-group-item-action dbBut1">Database</button>
             <button class="list-group-item list-group-item-action feedBut1">RSS Feed</button>
+            <button class="list-group-item list-group-item-action modelBut1">Helping Functions</button>
           </div>
         </div>
         <div class="col-10" id="mainCol">
@@ -464,13 +446,13 @@
         <h4> Contents: </h4>
         <div class="list-group">
           <button class="list-group-item list-group-item-action homeBut">Home</button>
-          <button class="list-group-item list-group-item-action modelBut1">Models & Design</button>
           <button class="list-group-item list-group-item-action structBut1">Page Structure</button>
           <button class="list-group-item list-group-item-action configBut1">Configuration file</button>
           <button class="list-group-item list-group-item-action owBut1">Openweather Map API</button>
           <button class="list-group-item list-group-item-action gmBut1">Google Maps API</button>
           <button class="list-group-item list-group-item-action dbBut1">Database</button>
           <button class="list-group-item list-group-item-action feedBut1">RSS Feed</button>
+          <button class="list-group-item list-group-item-action modelBut1">Helping Functions</button>
         </div>
       </div>
       <div class="col-10" id="mainCol">
